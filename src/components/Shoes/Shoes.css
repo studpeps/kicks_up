@@ -1,0 +1,29 @@
+.shoeArea {
+  float: left;
+  width: 60%;
+  margin: 0;
+  margin: 2rem 2rem;
+  margin-bottom: 0;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 5px 5px;
+  padding: 20px 20px;
+}
+.shoeHeading {
+  display: flex;
+  padding-left: 12px;
+}
+.shoeHeading h2 {
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  width: 65%;
+}
+
+.searchShoe select {
+  margin-left: 1rem;
+}
+.productArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,42 @@
+.productBox {
+  margin: 1rem 1rem;
+  width: fit-content;
+  height: fit-content;
+}
+div {
+  margin: 0;
+}
+.productImg {
+  margin: 0;
+  width: 180px;
+  height: 180px;
+  background-image: url("../../Images/shoe3.jpg");
+}
+.productDetails {
+  display: grid;
+  width: 100%;
+}
+.productDetails h3 {
+  grid-column-start: 1;
+  margin: 0;
+  text-align: left;
+  font-weight: 500;
+  padding: 0 0;
+}
+.productDetails .addBtn {
+  text-align: right;
+  grid-column-start: 2;
+  height: fit-content;
+}
+.productPrice {
+  display: flex;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.productPrice h4 {
+  margin: 0;
+  width: 55%;
+  text-align: left;
+  font-weight: 400;
+}
