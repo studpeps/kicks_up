@@ -39,7 +39,7 @@
 }
 .main-content {
   width: 100%;
-  margin-top: 1rem;
   display: flex;
   min-height: 200px;
+  margin-top: -1.2rem;
 }

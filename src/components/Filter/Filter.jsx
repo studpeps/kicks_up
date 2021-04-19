@@ -1,14 +1,28 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import "./Filter.css"
 import ColourFilter from "./ColourFilter/ColourFilter"
-import {FilterIcon} from "react-line-awesome"
+import {FilterIcon,ArrowCircleRightIcon} from "react-line-awesome"
 
 const Filter = () => {
+    const [filterOpen,setFilterOpen]=useState(false);
     const Checkbox = props => (
         <input type="checkbox" {...props} />
       )
+
+      const openFilter=()=>{
+        setFilterOpen(filterOpen=>!filterOpen)
+        if(filterOpen)
+        document.getElementById("desk").style.display="block";
+        else
+        document.getElementById("desk").style.display="none";
+      }
+
     return (
         <div className="leftArea">
+        <div className="mobileFilter" onClick={openFilter}>
+                <ArrowCircleRightIcon/>Filters
+            </div>
+        <div className="deskFilter" id="desk">
             <div className="filterHeading">
                 <h2>Filters</h2>
                 <FilterIcon className="filterIcon"/>
@@ -52,6 +66,7 @@ const Filter = () => {
                 </div>
             </div>
             <button type="submit" className="filterBtn">Apply</button>
+        </div>
         </div>
     )
 }

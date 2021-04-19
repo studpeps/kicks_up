@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Product from "../Product/Product"
-import {ShoppingBagIcon,MapPinIcon,CalendarDayIcon} from 'react-line-awesome'
+import {ShoppingBagIcon,MapPinIcon,CalendarDayIcon,ArrowCircleLeftIcon} from 'react-line-awesome'
 import "./Cart.css"
 
 const Cart = (props) => {
+    const [cartOpen,setCartOpen]=useState(false);
+
+    const openCart=()=>{
+        setCartOpen(cartOpen=>!cartOpen)
+        if(cartOpen)
+        document.getElementById("deskC").style.display="block";
+        else
+        document.getElementById("deskC").style.display="none";
+      }
+
     return (
         <div className="cartArea">
+            <div className="mobileCart" onClick={openCart}>
+            Cart<ArrowCircleLeftIcon/>
+            </div>
+            <div className="deskCart" id="deskC">
              <div className="cartHeading">
                 <h2>Cart</h2>
                 <ShoppingBagIcon className="shopIcon"/>
@@ -27,6 +41,8 @@ const Cart = (props) => {
                 Order Now
             </button>
         </div>
+        </div>
+        
     )
 }
 
